@@ -1,0 +1,60 @@
+
+
+<% layout("/layouts/boilerplate.ejs") %>
+<div class="row mt-3">
+  <div class="col-8 offset-2">
+
+  <h1>Edit the List</h1>
+ 
+  <form method="post" action="/listings/<%= listId._id %>?_method=PUT" class="needs-validation" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="title" class="form-title">Title:</label>
+      <input name="title" type="text" value="<%=listId.title%>"  class="form-control" required>
+      </div>
+   
+     <div class="mb-3">
+      <label for="description" class="form-description">Description:</label>
+      <input name="description" type="text" value="<%=listId.description%>" class="form-control" required>
+      </div>
+
+         <br>
+          <div class="mb-3" >
+        <label for="image" class="form-image">Original Image:</label></div>
+      <div class="mb-3" >
+       <img src="<%=listId.image.url%>">
+       </div>
+      <br>
+      <div class="mb-3" >
+        <label for="image" class="form-image">Update Image:</label>
+        <input name="listing[image]" 
+       type="file"
+      class="form-control"
+      accept="image/*"
+      placeholder="<%=listId.image.url%>"
+      >
+      </div>
+      <!-- <br> -->
+      <div class="row">
+        <div class="mb-3 col-md-4">
+         <label for="price" class="form-price">Price:</label>
+      <input name="price" type="number" value="<%=listId.price%>" class="form-control" required>
+      </div>
+     
+      <!-- <br> -->
+     
+        <div class="mb-3 col-md-4">
+         <label for="country" class="form-price">Country:</label>
+      <input name="country" type="text" value="<%=listId.country%>" class="form-control" required>
+      </div>
+      </div>
+      <!-- <br> -->
+      <div class="mb-3">
+        <label for="location"class="form-price">Location:</label>
+      <input name="location" type="text" value="<%=listId.location%>" class="form-control" required>
+      </div>
+      <!-- <br> -->
+     <button class="btn btn-dark mt-3">Edit</button>
+  </form>
+</div>
+</div>
+
