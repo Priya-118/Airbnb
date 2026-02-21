@@ -76,7 +76,9 @@ app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
 
-
+app.get("/", (req, res) => {
+  res.send("Airbnb backend is running successfully 🚀");
+});
 
 // const ExpressError = require("./utils/ExpressError");
 // app.all("*", (req, res, next) => {
