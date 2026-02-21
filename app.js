@@ -80,6 +80,13 @@ app.get("/", (req, res) => {
   res.send("Airbnb backend is running successfully 🚀");
 });
 
+
+
+
+
+
+
+
 // const ExpressError = require("./utils/ExpressError");
 // app.all("*", (req, res, next) => {
 //   next(new ExpressError(404, "Page Not Found !!"));
