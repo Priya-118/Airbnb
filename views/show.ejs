@@ -21,7 +21,7 @@
   <br/>
   <% console.log("Current User:", curruser) %>
 <% console.log("Data Owner:", data.owner) %>
- <% if(curruser && data.owner._id.equals(curruser._id)) { %>
+<% if(curruser && review.author._id.toString() === curruser._id.toString()) { %>
   <div class="btns">
     <a href="/listings/<%= data._id %>/edit" class="btn btn-dark edit-btn col-1 offset-2">Edit</a>
     
@@ -29,7 +29,7 @@
       <button class="btn btn-dark offset-4">Delete</button>
     </form>
   </div>
-<% } %>
+<%} %>
   <div class="col-8 offset-2">
     <br>
     <hr>
@@ -72,13 +72,13 @@
     <% for(review of data.reviews) { %>
     <div class="card">
   <div class="card-body cls-6 offset-3 ">
-    <h5 class="card-title"><%= review.author %></h5>
+    <h5 class="card-title"><%= review.author.username%></h5>
     <p class="card-text"> <%= review.comment %></p>
    <% for(i=0;i<review.rating;i++) { %>
      <span>⭐</span> 
   <% } %>
   <% if(data._id.toString() === curruser._id.toString()) {%>
- <form method="POST" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
+ <form method="POST" action="/listings/<%= data._id %>/reviews/<%= review._id %>?_method=DELETE">
   <button class="btn btn-sm btn-dark">Delete</button>
 </form>
 <% } %>

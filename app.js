@@ -31,13 +31,16 @@ app.use(methodOverride("_method"));
 app.use(cookieParser());
 
 // MongoDB Connection
-main()
-  .then(() => console.log("working database"))
-  .catch((err) => console.log(err));
+
+// const mongoose = require("mongoose");
+
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");
+  await mongoose.connect(process.env.MONGO_URL);
 }
 
+main()
+  .then(() => console.log("Database Connected"))
+  .catch((err) => console.log(err));
 // Session config
 const sessionOptions = {
   secret: "mysecret",

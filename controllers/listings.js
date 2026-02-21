@@ -1,6 +1,7 @@
 const Listing = require('../models/listing');
 const { listingSchema } = require('../schema'); // adjust the path if needed
 const mongoose=require('mongoose');
+const ExpressError= require('../utils/ExpressError')
 
 //index route
 module.exports.index = async (req, res) => {
