@@ -80,7 +80,9 @@ app.get("/", (req, res) => {
   res.send("Airbnb backend is running successfully 🚀");
 });
 
-
+app.get("/test", (req, res) => {
+  res.send("Working in production");
+});
 
 
 
