@@ -41,7 +41,9 @@ async function main() {
 main()
   .then(() => console.log("Database Connected"))
   .catch((err) => console.log(err));
+  
 // Session config
+
 const sessionOptions = {
   secret: "mysecret",
   resave: false,
