@@ -82,8 +82,8 @@ app.get("/", (req, res) => {
   res.render("home")
 });
 
-app.get("/test", (req, res) => {
-  res.send("Working in production");
+app.all("*", (req, res) => {
+  res.status(404).render("404");
 });
 
 // const ExpressError = require("./utils/ExpressError");
