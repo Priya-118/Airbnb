@@ -37,10 +37,13 @@ majorproject/
 Clone the repository:Bashgit clone [https://github.com/Priya-118/Airbnb.git](https://github.com/Priya-118/Airbnb.git)
 cd Airbnb
 Install dependencies:Bash npm install
+
 Environment Variables:Create a .env file in the root directory and add:Code snippet
 MONGO_URL=your_mongodb_connection_string
 SECRET=your_session_secret
-Run the application:Bash node app.js
+Run the application:Bash npm start
 # or if you have nodemon installed
 nodemon app.js
-🛤️ API Endpoints (Examples)MethodEndpointDescriptionGET/listingsGet all property listingsPOST/listingsCreate a new listing (Auth required)GET/listings/:idGet details of a specific listingPOST/listings/:id/reviewsAdd a review to a listingDELETE/listings/:idDelete a listing🤝 ContributingContributions, issues, and feature requests are welcome! Feel free to check the issues page.Developed by Priya
+
+## 🌐 Live Demo
+🔗 [https://your-project-link.com](https://airbnb-bla9.onrender.com/)
