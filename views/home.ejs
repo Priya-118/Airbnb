@@ -1,0 +1,77 @@
+<% layout("/layouts/boilerplate.ejs") %>
+ <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:50vh;
+      padding:40px;
+      margin-top: 0;
+    }
+
+    .left{
+      width:50%;
+    }
+
+    .left h1{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .links a{
+      display:block;
+      margin:10px 0;
+      text-decoration:none;
+      font-size:18px;
+      color:#333;
+    }
+
+    .btn{
+      margin-top:20px;
+      padding:12px 20px;
+      background:#ff5a5f;
+      color:white;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:16px;
+    }
+
+    .right{
+      width:50%;
+      text-align:center;
+    }
+
+    .right img{
+      width:90%;
+      border-radius:10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="left">
+    <h1>Welcome to Airbnb</h1>
+
+    <div class="links">
+     Welcome to our Airbnb-style platform where users can explore a variety of unique places to stay. Browse through different listings, view detailed information, and discover comfortable stays for your next trip. The platform makes it easy to find and explore accommodations in different locations. Start exploring and find the perfect place that feels like home.
+    </div>
+
+    <a href="/listings">
+      <button class="btn">View Listings</button>
+    </a>
+  </div>
+
+  <div class="right">
+    <img src="/image/airbnb(1).jpg" alt="airbnb image">
+  </div>
+
+</div>

@@ -41,7 +41,7 @@ async function main() {
 main()
   .then(() => console.log("Database Connected"))
   .catch((err) => console.log(err));
-  
+
 // Session config
 
 const sessionOptions = {
@@ -79,17 +79,12 @@ app.use("/", userRouter);
 
 
 app.get("/", (req, res) => {
-  res.send("Airbnb backend is running successfully 🚀");
+  res.render("home")
 });
 
 app.get("/test", (req, res) => {
   res.send("Working in production");
 });
-
-
-
-
-
 
 // const ExpressError = require("./utils/ExpressError");
 // app.all("*", (req, res, next) => {
