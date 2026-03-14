@@ -3,7 +3,6 @@
 A robust RESTful API built for a vacation rental marketplace. This project handles user authentication, property listings, and a review system, following the MVC (Model-View-Controller) architecture.
 
 ## 🚀 Tech Stack
-
 * **Runtime:** Node.js
 * **Framework:** Express.js
 * **Database:** MongoDB (Atlas)
